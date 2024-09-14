@@ -1,8 +1,9 @@
+
 # Monitor de Recursos del Sistema (Bash) (ESP)
 
 ## Visión General
 
-Este script Bash monitoriza y muestra en tiempo real el uso de CPU, memoria y disco de su sistema. El script se actualiza cada 5 segundos e incluye gestión de errores para mayor robustez. Util para sysadmins y y devs que necesitan información rápida sobre el consumo de recursos.
+Este script Bash monitoriza y muestra en tiempo real el uso de CPU, memoria y disco de su sistema. El script se actualiza cada 5 segundos e incluye manejo de errores para mayor robustez. Es perfecto para administradores de sistemas y desarrolladores que necesitan información rápida sobre el consumo de recursos.
 
 ## Características
 
@@ -19,20 +20,20 @@ Este script Bash monitoriza y muestra en tiempo real el uso de CPU, memoria y di
 
 1. **Clonar el repositorio**:
    ```bash
-   git clone https://github.com/yourusername/system-resource-monitor.git
-   cd sistema-monitor-de-recursos
+   git clone https://github.com/elliotsecops/system-resource-monitor.git
+   cd system-resource-monitor
    ```
 
 2. **Hacer ejecutable el script**:
    ```bash
-   chmod +x sistema_monitor_de_recursos.sh
+      chmod +x system_monitor.sh
    ```
 
 ## Uso
 
 1. **Ejecutar el Script**:
    ```bash
-   ./sistema_monitor_recursos.sh
+      ./system_monitor.sh
    ```
 
 2. **Monitorizar la salida**:
@@ -54,11 +55,15 @@ Uso de Disco: 50% 250.0GB usados de 500.0GB
 Actualizando cada 5 segundos. Presione Ctrl+C para salir.
 ```
 
+
+
+---
+
 # System Resource Monitor (Bash) (EN)
 
 ## Overview
 
-This Bash script monitors and displays real-time CPU, memory, and disk usage of your system. The script refreshes every 5 seconds and includes error handling for robustness. Ideal for sysadmins and developers who need quick insights into resource consumption.
+This Bash script monitors and displays real-time CPU, memory, and disk usage of your system. The script refreshes every 5 seconds and includes error handling for robustness. It is perfect for system administrators and developers who need quick insights into resource consumption.
 
 ## Features
 
@@ -70,25 +75,26 @@ This Bash script monitors and displays real-time CPU, memory, and disk usage of 
 ## Requirements
 
 - **Operating System**: Linux or macOS
+- **Commands**: `mpstat`, `free`, `df`, `awk`, `clear`
 
 ## Installation
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/system-resource-monitor.git
+   git clone https://github.com/elliotsecops/system-resource-monitor.git
    cd system-resource-monitor
    ```
 
 2. **Make the Script Executable**:
    ```bash
-   chmod +x system_resource_monitor.sh
+   chmod +x system_monitor.sh
    ```
 
 ## Usage
 
 1. **Run the Script**:
    ```bash
-   ./system_resource_monitor.sh
+   ./system_monitor.sh
    ```
 
 2. **Monitor the Output**:
