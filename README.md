@@ -14,7 +14,6 @@ Este script Bash monitoriza y muestra en tiempo real el uso de CPU, memoria y di
 ## Requisitos
 
 - Sistema operativo**: Linux o macOS
-- Comandos**: `mpstat`, `free`, `df`, `awk`, `clear`
 
 ## Instalación
 
@@ -71,7 +70,6 @@ This Bash script monitors and displays real-time CPU, memory, and disk usage of 
 ## Requirements
 
 - **Operating System**: Linux or macOS
-- **Commands**: `mpstat`, `free`, `df`, `awk`, `clear`
 
 ## Installation
 
