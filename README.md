@@ -2,7 +2,7 @@
 
 ## Visión General
 
-Este script Bash monitoriza y muestra en tiempo real el uso de CPU, memoria y disco de su sistema. El script se actualiza cada 5 segundos e incluye gestión de errores para mayor robustez. Es perfecto para administradores de sistemas y desarrolladores que necesitan información rápida sobre el consumo de recursos.
+Este script Bash monitoriza y muestra en tiempo real el uso de CPU, memoria y disco de su sistema. El script se actualiza cada 5 segundos e incluye gestión de errores para mayor robustez. Util para sysadmins y y devs que necesitan información rápida sobre el consumo de recursos.
 
 ## Características
 
@@ -59,7 +59,7 @@ Actualizando cada 5 segundos. Presione Ctrl+C para salir.
 
 ## Overview
 
-This Bash script monitors and displays real-time CPU, memory, and disk usage of your system. The script refreshes every 5 seconds and includes error handling for robustness. It is perfect for system administrators and developers who need quick insights into resource consumption.
+This Bash script monitors and displays real-time CPU, memory, and disk usage of your system. The script refreshes every 5 seconds and includes error handling for robustness. Ideal for sysadmins and developers who need quick insights into resource consumption.
 
 ## Features
 
