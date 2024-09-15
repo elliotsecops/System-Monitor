@@ -20,8 +20,8 @@ Este script Bash monitoriza y muestra en tiempo real el uso de CPU, memoria y di
 
 1. **Clonar el repositorio**:
    ```bash
-   git clone https://github.com/elliotsecops/system-resource-monitor.git
-   cd system-resource-monitor
+   git clone https://github.com/elliotsecops/System-monitor.git
+   cd System-monitor
    ```
 
 2. **Hacer ejecutable el script**:
@@ -80,9 +80,9 @@ This Bash script monitors and displays real-time CPU, memory, and disk usage of 
 ## Installation
 
 1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/elliotsecops/system-resource-monitor.git
-   cd system-resource-monitor
+  ```bash
+   git clone https://github.com/elliotsecops/System-monitor.git
+   cd System-monitor
    ```
 
 2. **Make the Script Executable**:
