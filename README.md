@@ -26,7 +26,7 @@ Este script Bash monitoriza y muestra en tiempo real el uso de CPU, memoria y di
 
 2. **Hacer ejecutable el script**:
    ```bash
-      chmod +x system_monitor.sh
+      chmod u+x system_monitor.sh
    ```
 
 ## Uso
@@ -87,7 +87,7 @@ This Bash script monitors and displays real-time CPU, memory, and disk usage of 
 
 2. **Make the Script Executable**:
    ```bash
-   chmod +x system_monitor.sh
+   chmod u+x system_monitor.sh
    ```
 
 ## Usage
