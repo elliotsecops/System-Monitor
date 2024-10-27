@@ -22,7 +22,7 @@ This script provides real-time monitoring of CPU, memory, and disk usage on a Un
 2. **Make the Script Executable**
 
    ```bash
-   chmod +x system_monitor.sh
+   chmod u+x system_monitor.sh
    ```
 
 3. **Install the Script**
