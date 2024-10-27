@@ -1,4 +1,3 @@
-
 ### System Monitor Script
 
 This script provides real-time monitoring of CPU, memory, and disk usage on a Unix-like system. It is designed to be easy to use and highly configurable.
@@ -26,6 +25,12 @@ This script provides real-time monitoring of CPU, memory, and disk usage on a Un
    chmod +x system_monitor.sh
    ```
 
+3. **Install the Script**
+
+   ```bash
+   ./install.sh
+   ```
+
 #### Usage
 
 ##### Basic Usage
@@ -33,7 +38,7 @@ This script provides real-time monitoring of CPU, memory, and disk usage on a Un
 To run the script with default settings:
 
 ```bash
-./system_monitor.sh
+system_monitor
 ```
 
 ##### Command-Line Options
@@ -41,25 +46,25 @@ To run the script with default settings:
 - **Set Interval**: Use the `-i` or `--interval` option to set the refresh interval in seconds.
 
   ```bash
-  ./system_monitor.sh -i 10
+  system_monitor -i 10
   ```
 
 - **Add Disk Mount Points**: Use the `-d` or `--disk` option to add disk mount points to monitor.
 
   ```bash
-  ./system_monitor.sh -d /mnt/data -d /mnt/backup
+  system_monitor -d /mnt/data -d /mnt/backup
   ```
 
 - **Load Configuration File**: Use the `-c` or `--config` option to load configuration from a file.
 
   ```bash
-  ./system_monitor.sh -c config.sh
+  system_monitor -c config.sh
   ```
 
 - **Display Help**: Use the `-h` or `--help` option to display the help message.
 
   ```bash
-  ./system_monitor.sh -h
+  system_monitor -h
   ```
 
 ##### Configuration File
@@ -87,7 +92,7 @@ To monitor CPU, memory, and disk usage every 10 seconds, including `/mnt/data` a
 2. Run the script with the configuration file:
 
    ```bash
-   ./system_monitor.sh -c config.sh
+   system_monitor -c config.sh
    ```
 
 #### Troubleshooting
