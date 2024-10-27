@@ -1,117 +1,105 @@
 
-# Monitor de Recursos del Sistema (Bash) (ESP)
+### System Monitor Script
 
-## Visión General
+This script provides real-time monitoring of CPU, memory, and disk usage on a Unix-like system. It is designed to be easy to use and highly configurable.
 
-Este script Bash monitoriza y muestra en tiempo real el uso de CPU, memoria y disco de su sistema. El script se actualiza cada 5 segundos e incluye manejo de errores para mayor robustez. Es perfecto para administradores de sistemas y desarrolladores que necesitan información rápida sobre el consumo de recursos.
+#### Features
 
-## Características
+- **Real-Time Monitoring**: Displays CPU, memory, and disk usage every few seconds.
+- **Customizable Interval**: Users can set the refresh interval.
+- **Multiple Disk Monitoring**: Supports monitoring multiple disk mount points.
+- **Configuration File**: Allows loading configuration from an external file.
+- **Graceful Exit**: Handles `SIGINT` (Ctrl+C) and `SIGTERM` signals to exit gracefully.
 
-- Monitorización en tiempo real**: Muestra el uso de CPU, memoria y disco en tiempo real.
-- Intervalo de actualización**: Actualiza la información cada 5 segundos.
-- Manejo de Errores**: Incluye manejo básico de errores para asegurar que el script no falle silenciosamente.
-- Formato claro**: Proporciona una salida clara y consistente para una fácil lectura.
+#### Installation
 
-## Requisitos
+1. **Clone the Repository**
 
-- Sistema operativo**: Linux o macOS
-
-## Instalación
-
-1. **Clonar el repositorio**:
    ```bash
-   git clone https://github.com/elliotsecops/System-monitor.git
-   cd System-monitor
+   git clone https://github.com/elliotsecops/System-Monitor.git
+   cd System-Monitor
    ```
 
-2. **Hacer ejecutable el script**:
-   ```bash
-      chmod +x system_monitor.sh
-   ```
+2. **Make the Script Executable**
 
-## Uso
-
-1. **Ejecutar el Script**:
-   ```bash
-      ./system_monitor.sh
-   ```
-
-2. **Monitorizar la salida**:
-   El script mostrará la fecha y hora actuales, el uso de CPU, el uso de memoria y el uso de disco. La información se actualiza cada 5 segundos.
-
-3. **Salir del Script**:
-   Pulse `Ctrl+C` para detener el script.
-
-## Ejemplo de Salida
-
-```
-======= Monitor de Recursos del Sistema =======
-Fecha y Hora: 2023-10-05 12:34:56
-----------------------------------------------
-Uso de CPU: 15.34%
-Uso de Memoria: 45.67% 1024MB usados de 2048MB
-Uso de Disco: 50% 250.0GB usados de 500.0GB
-----------------------------------------------
-Actualizando cada 5 segundos. Presione Ctrl+C para salir.
-```
-
-
-
----
-
-# System Resource Monitor (Bash) (EN)
-
-## Overview
-
-This Bash script monitors and displays real-time CPU, memory, and disk usage of your system. The script refreshes every 5 seconds and includes error handling for robustness. It is perfect for system administrators and developers who need quick insights into resource consumption.
-
-## Features
-
-- **Real-Time Monitoring**: Displays CPU, memory, and disk usage in real-time.
-- **Refresh Interval**: Refreshes the information every 5 seconds.
-- **Error Handling**: Includes basic error handling to ensure the script doesn't fail silently.
-- **Clear Formatting**: Provides clear and consistent output for easy readability.
-
-## Requirements
-
-- **Operating System**: Linux or macOS
-- **Commands**: `mpstat`, `free`, `df`, `awk`, `clear`
-
-## Installation
-
-1. **Clone the Repository**:
-  ```bash
-   git clone https://github.com/elliotsecops/System-monitor.git
-   cd System-monitor
-   ```
-
-2. **Make the Script Executable**:
    ```bash
    chmod +x system_monitor.sh
    ```
 
-## Usage
+#### Usage
 
-1. **Run the Script**:
+##### Basic Usage
+
+To run the script with default settings:
+
+```bash
+./system_monitor.sh
+```
+
+##### Command-Line Options
+
+- **Set Interval**: Use the `-i` or `--interval` option to set the refresh interval in seconds.
+
+  ```bash
+  ./system_monitor.sh -i 10
+  ```
+
+- **Add Disk Mount Points**: Use the `-d` or `--disk` option to add disk mount points to monitor.
+
+  ```bash
+  ./system_monitor.sh -d /mnt/data -d /mnt/backup
+  ```
+
+- **Load Configuration File**: Use the `-c` or `--config` option to load configuration from a file.
+
+  ```bash
+  ./system_monitor.sh -c config.sh
+  ```
+
+- **Display Help**: Use the `-h` or `--help` option to display the help message.
+
+  ```bash
+  ./system_monitor.sh -h
+  ```
+
+##### Configuration File
+
+You can create a configuration file to set default values for interval and disk mount points. Here is an example `config.sh`:
+
+```bash
+INTERVAL=5
+DISKS="/ /mnt/data /mnt/backup"  # Space-separated
+```
+
+Place this file in the same directory as the script or specify its path when running the script with the `-c` option.
+
+#### Example
+
+To monitor CPU, memory, and disk usage every 10 seconds, including `/mnt/data` and `/mnt/backup` mount points, using a configuration file:
+
+1. Create a configuration file `config.sh`:
+
    ```bash
-   ./system_monitor.sh
+   INTERVAL=10
+   DISKS="/mnt/data /mnt/backup"
    ```
 
-2. **Monitor the Output**:
-   The script will display the current date and time, CPU usage, memory usage, and disk usage. The information refreshes every 5 seconds.
+2. Run the script with the configuration file:
 
-3. **Exit the Script**:
-   Press `Ctrl+C` to stop the script.
+   ```bash
+   ./system_monitor.sh -c config.sh
+   ```
 
-## Example Output
+#### Troubleshooting
 
-```
-======= Monitor de Recursos del Sistema =======
-Fecha y Hora: 2023-10-05 12:34:56
-----------------------------------------------
-Uso de CPU: 15.34%
-Uso de Memoria: 45.67%  1024MB usados de 2048MB
-Uso de Disco: 50%  250.0GB usados de 500.0GB
-----------------------------------------------
-Actualizando cada 5 segundos. Presione Ctrl+C para salir.
-```
+- **Script Not Found**: Ensure the script is executable and located in your current directory or specify the full path.
+- **Invalid Interval**: The interval must be a positive integer. If you encounter an error, check the interval value.
+- **Disk Mount Points**: Ensure the specified disk mount points exist and are accessible.
+
+#### Contributing
+
+Contributions are welcome! Please feel free to submit a pull request or open an issue.
+
+#### License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
